@@ -246,11 +246,11 @@ body {
     background-color: var(--button-bg-color);
 }
 .portfolio-photo figure {
-    width: 370px;
-    border: 1px solid #eeeeee;
+    max-width: 370px;
 }
 .portfolio figcaption {
     padding: 20px 0 20px 24px;
+    border: 1px solid #eeeeee;
 }
 .portfolio-photo .photo-title {
     font-size: 18px;
