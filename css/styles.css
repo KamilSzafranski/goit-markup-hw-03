@@ -22,7 +22,18 @@ img {
 a {
     text-decoration: none;
 }
+h1 {
+    margin-bottom: 30px;
+    font-size: 44px;
+}
 
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+}
 ul {
     list-style: none;
 }
@@ -53,6 +64,7 @@ body {
     letter-spacing: 0.02em;
     background: var(--white-bg-color);
     color: var(--text--black-color);
+    border-bottom: 1px solid var(--text-grey-color);
 }
 .company-name {
     font-family: Raleway, sans-serif;
@@ -96,10 +108,7 @@ body {
     text-align: center;
     background-color: var(--footer-header-bg-color);
 }
-.header h1 {
-    margin-bottom: 30px;
-    font-size: 44px;
-}
+
 .header button {
     padding: 10px 41px 10px 42px;
     font-weight: 700;
@@ -114,14 +123,17 @@ body {
 }
 .description {
     background: var(--white-bg-color);
-    padding-left: 215px;
-    padding-right: 215px;
 }
 
 .text {
     display: flex;
-    gap: 30px;
+    justify-content: center;
     margin-bottom: 94px;
+    column-gap: 30px;
+}
+
+.text li {
+    flex-basis: 270px;
 }
 .text h3 {
     margin-bottom: 10px;
@@ -133,12 +145,12 @@ body {
     line-height: 1.7;
     color: var(--text-grey-color);
 }
-
-.job li {
-    display: inline-block;
-}
 .job ul {
     font-size: 0px;
+    text-align: center;
+}
+.job li {
+    display: inline-block;
 }
 .job li:first-child {
     padding-right: 30px;
@@ -147,20 +159,16 @@ body {
     padding-right: 30px;
 }
 
-.job-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
 .team {
     background-color: var(--team-button-bg-color);
 }
+.team ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 .team figure {
     width: 270px;
-    height: 368px;
     background-color: var(--photo-bg-color);
     line-height: 1.1875;
     text-align: center;
@@ -168,13 +176,20 @@ body {
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
+
+.team figcaption {
+    padding: 30px 0;
+}
 .photo-title {
     font-weight: 500;
 }
+
 .team p + p {
     color: var(--text-grey-color);
+    padding-top: 10px;
 }
 .footer {
+    padding: 60px 0 60px 215px;
     background-color: var(--footer-header-bg-color);
     line-height: 1.7;
     color: var(--text-white-color);
@@ -182,25 +197,40 @@ body {
 .adress {
     font-style: normal;
 }
-.footer a {
+.footer > a {
+    display: block;
+    margin-bottom: 20px;
     color: var(--text-white-color);
 }
 .adress a {
     color: rgba(255, 255, 255, 0.6);
+}
+.adress p {
+    margin-bottom: 9px;
 }
 .footer a:hover,
 .footer a:focus {
     color: var(--backligh-color);
 }
 
-.portfolio {
+.portfolio-container {
+    padding-left: 215px;
+    padding-right: 215px;
+    background-color: var(--white-bg-color);
     font-size: 16px;
-    background-color: var(--body-bg-color);
+}
+.portfolio ul:first-child {
+    margin-bottom: 50px;
+    font-size: 0px;
+    text-align: center;
 }
 
+.portfolio-filters li {
+    display: inline-block;
+    padding-right: 8px;
+}
 .portfolio-filters button {
-    width: 114px;
-    height: 38px;
+    padding: 6px 22px;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.625;
@@ -217,8 +247,10 @@ body {
 }
 .portfolio-photo figure {
     width: 370px;
-    height: 404px;
     border: 1px solid #eeeeee;
+}
+.portfolio figcaption {
+    padding: 20px 0 20px 24px;
 }
 .portfolio-photo .photo-title {
     font-size: 18px;
@@ -229,4 +261,11 @@ body {
 .portfolio-photo .photo-description {
     line-height: 1.1875;
     color: var(--text-grey-color);
+}
+
+.portfolio ul:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-basis: ((100%-60px)/3);
 }
