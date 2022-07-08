@@ -137,9 +137,16 @@ body {
 .job li {
     display: inline-block;
 }
-.job li:not(last-child) {
+.job ul {
+    font-size: 0px;
+}
+.job li:first-child {
     padding-right: 30px;
 }
+.job li:nth-child(2) {
+    padding-right: 30px;
+}
+
 .job-title {
     font-weight: 700;
     font-size: 36px;
