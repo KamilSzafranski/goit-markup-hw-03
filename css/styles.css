@@ -66,6 +66,9 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.menu .container > ul:first-child {
+    border-bottom: 1px solid #e4e8ee;
+}
 .logo-links {
     display: flex;
     align-items: center;
