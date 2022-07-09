@@ -23,8 +23,10 @@ a {
     text-decoration: none;
 }
 h1 {
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    max-width: 696px;
     font-size: 44px;
+    letter-spacing: 0.06em;
 }
 
 h2 {
@@ -38,33 +40,42 @@ ul {
     list-style: none;
 }
 body {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
     background-color: #e4e8ee;
     font-family: Roboto, Raleway, sans-serif;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     color: var(--text--black-color);
+    width: 1600px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.container {
-    width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-}
 .section {
     padding: 94px 0;
 }
-.menu {
+.menu .container > ul {
+    padding: 24px 0;
     display: flex;
     align-items: center;
-    padding-left: 215px;
-    padding-right: 227px;
     justify-content: space-between;
+}
+.logo-links {
+    display: flex;
+    align-items: center;
+    gap: 93px;
+}
+.menu {
     font-weight: 500;
     letter-spacing: 0.02em;
     background: var(--white-bg-color);
     color: var(--text--black-color);
-    border-bottom: 1px solid #e4e8ee;
 }
 .company-name {
     font-family: Raleway, sans-serif;
@@ -74,9 +85,9 @@ body {
     color: var(--logo-black-color);
 }
 .menu-links ul {
-    padding: 32px 0px;
-    gap: 46px;
     display: flex;
+    align-items: center;
+    gap: 46px;
 }
 .menu-links a {
     color: var(--text--black-color);
@@ -84,6 +95,7 @@ body {
 
 .menu-contacts {
     display: flex;
+    align-items: center;
     gap: 50px;
 }
 .menu-contacts a {
@@ -99,10 +111,9 @@ body {
 }
 
 .header {
-    padding: 200px 452px;
+    padding: 200px 0;
     font-weight: 900;
     line-height: 1.36;
-    letter-spacing: 0.06em;
     color: var(--text-white-color);
     text-transform: uppercase;
     text-align: center;
@@ -119,6 +130,7 @@ body {
     color: var(--text-white-color);
     background-color: var(--button-bg-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
     cursor: pointer;
 }
 .description {
@@ -132,9 +144,6 @@ body {
     column-gap: 30px;
 }
 
-.text li {
-    flex-basis: 270px;
-}
 .text h3 {
     margin-bottom: 10px;
     font-weight: 700;
@@ -146,17 +155,8 @@ body {
     color: var(--text-grey-color);
 }
 .job ul {
-    font-size: 0px;
-    text-align: center;
-}
-.job li {
-    display: inline-block;
-}
-.job li:first-child {
-    padding-right: 30px;
-}
-.job li:nth-child(2) {
-    padding-right: 30px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .team {
@@ -189,15 +189,14 @@ body {
     padding-top: 10px;
 }
 .footer {
-    padding: 60px 0 60px 215px;
+    padding: 60px 0;
     background-color: var(--footer-header-bg-color);
-    line-height: 1.7;
     color: var(--text-white-color);
 }
 .adress {
     font-style: normal;
 }
-.footer > a {
+.footer .container > a {
     display: block;
     margin-bottom: 20px;
     color: var(--text-white-color);
@@ -213,22 +212,17 @@ body {
     color: var(--backligh-color);
 }
 
-.portfolio-container {
-    padding-left: 215px;
-    padding-right: 215px;
+.portfolio {
     background-color: var(--white-bg-color);
     font-size: 16px;
 }
-.portfolio ul:first-child {
+.portfolio-filters {
     margin-bottom: 50px;
-    font-size: 0px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
 }
 
-.portfolio-filters li {
-    display: inline-block;
-    padding-right: 8px;
-}
 .portfolio-filters button {
     padding: 6px 22px;
     font-size: 16px;
@@ -244,6 +238,15 @@ body {
 .portfolio-filters button:focus {
     color: var(--text-white-color);
     background-color: var(--button-bg-color);
+}
+.portfolio-photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio-photo li {
+    flex-basis: calc((1200px-60px) / 3);
 }
 .portfolio-photo figure {
     max-width: 370px;
@@ -261,11 +264,4 @@ body {
 .portfolio-photo .photo-description {
     line-height: 1.1875;
     color: var(--text-grey-color);
-}
-
-.portfolio ul:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    flex-basis: ((100%-60px)/3);
 }
